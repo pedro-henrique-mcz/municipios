@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal da Transparencia - Maribondo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/flavicon/favicon-16x16.png">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <header class="header">
+    <div class="info-header">
+      <div class="grid-container">
+        <div class="col-span-4 vertical-center">
+          <p>segunda a sexta-feira - 7:00 às 13:00hs - (82) 3270-1114</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="nav-header col-span-12">
+        <a href="#">
+          <img src="img/brasao-maribondo.png" alt="brasao de Maribondo">
+        </a>
+        <div class="contato-dropdown desativado">
+          <p>NOSSOS CONTATOS</p>
+          <img src="img/icons/contato-drop-down.png" alt="" class="imgdropdown">
+          <ul class="contato-dropdown-list none">
+            <li>
+              <p class="dropdown-name">Gabinete</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Administração</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Agricultura</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Assistência Social</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Cultura</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Finança</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Infraestrutura</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Saúde</p>
+              <p class="dropdown-number">(82)3270-1561</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal Educação</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero-section grid-container">
+    <div class="hero-content col-span-12">
+      <div class="hero">
+        <div class="hero-info">
+          <h1>Portal da Transparência</h1>
+          <p>Saiba como o Governo Municipal Aplica seu Dinheiro </p>
+        </div>
+        <div class="hero-search">
+          <p>Acesso a Informação Municipal</p>
+          <form action="" method="get">
+            <div class="search-container">
+              <input type="text" placeholder="Pesquise Aqui" id="searchInput">
+              <button type="submit">BUSCAR</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="hero-img"></div>
+    </div>
+  </div>
+  <section class="federal-banner">
+    <p>Para detalhes das leis federais do portal, clique <a href="#" class="internal-link">aqui</a>.</p>
+  </section>
+  <section class="cards-section">
+    <ul class="cards grid-container">
+      <li class="card covid col-span-3">
+        <div class="card-img">
+          <img src="img/cards-icon/covid.png" alt="covid">
+        </div>
+        <p class="card-name">Covid-19</p>
+        <div class="vetor-card">
+          <img src="img/icons/dropdown.png" alt="vetor-card-drop">
+        </div>
+      </li>
+      <li class="card col-span-3 dropdown-card none">
+        <div class="card-img">
+          <img src="img/cards-icon/receitas.png" alt="covid">
+        </div>
+        <p class="card-name">Legislacao</p>
+        <div class="vetor-card">
+          <img src="img/icons/dropdown.png" alt="vetor-card">
+        </div>
+        <ul class="dropdown-list">
+          <li><a href="#">Leis</a></li>
+          <li><a href="#">Decretos</a></li>
+          <li><a href="#">Portarias</a></li>
+          <li><a href="#">Normativas</a></li>
+          <li><a href="#">CACS-FUNDEB</a></li>
+          <li><a href="#">CMAS</a></li>
+          <li><a href="#">CMCDA</a></li>
+          <li><a href="#">Gestao Democratica</a></li>
+        </ul>
+      </li>
+      <li class="card col-span-3">
+        <div class="card-img">
+          <img src="img/cards-icon/receitas.png" alt="covid">
+        </div>
+        <p class="card-name">Receitas</p>
+        <div class="vetor-card">
+          <img src="img/icons/point.png" alt="vetor-card">
+        </div>
+      </li>
+      <li class="card col-span-3">
+        <div class="card-img">
+          <img src="img/cards-icon/despesas.png" alt="covid">
+        </div>
+        <p class="card-name">Despesas</p>
+        <div class="vetor-card">
+          <img src="img/icons/point.png" alt="vetor-card">
+        </div>
+      </li>
+      <li class="card col-span-3 dropdown-card none">
+        <div class="card-img">
+          <img src="img/cards-icon/servidores.png" alt="covid">
+        </div>
+        <p class="card-name">Servidores</p>
+        <div class="vetor-card">
+          <img src="img/icons/dropdown.png" alt="vetor-card-drop">
+        </div>
+        <ul class="dropdown-list">
+          <li><a href="#">Lista de Servidores</a></li>
+          <li><a href="#">Ponto Eletronico</a></li>
+        </ul>
+      </li>
+      <li class="card col-span-3">
+        <div class="card-img">
+          <img src="img/cards-icon/parcerias.png" alt="covid">
+        </div>
+        <p class="card-name">Parceirias</p>
+        <div class="vetor-card">
+          <img src="img/icons/point.png" alt="vetor-card">
+        </div>
+      </li>
+      <li class="card col-span-3">
+        <div class="card-img">
+          <img src="img/cards-icon/contrato.png" alt="covid">
+        </div>
+        <p class="card-name">Contratos</p>
+        <div class="vetor-card">
+          <img src="img/icons/point.png" alt="vetor-card">
+        </div>
+      </li>
+      <li class="card col-span-3">
+        <div class="card-img">
+          <img src="img/cards-icon/seguro.png" alt="covid">
+        </div>
+        <p class="card-name">Licitações</p>
+        <div class="vetor-card">
+          <img src="img/icons/point.png" alt="vetor-card-drop">
+        </div>
+      </li>
+      <li class="card col-span-3 dropdown-card none">
+        <div class="card-img">
+          <img src="img/cards-icon/LRF.png" alt="covid">
+        </div>
+        <p class="card-name ">LRF</p>
+        <div class="vetor-card">
+          <img src="img/icons/dropdown.png" alt="vetor-card">
+        </div>
+        <ul class="dropdown-list">
+          <li><a href="#">RREO</a></li>
+          <li><a href="#">RGF</a></li>
+          <li><a href="#">SIOPE</a></li>
+          <li><a href="#">SIOPS</a></li>
+        </ul>
+      </li>
+      <li class="card col-span-3 dropdown-card none">
+        <div class="card-img">
+          <img src="img/cards-icon/orcamento.png" alt="covid">
+        </div>
+        <p class="card-name">Orcamento</p>
+        <div class="vetor-card">
+          <img src="img/icons/dropdown.png" alt="vetor-card">
+        </div>
+        <ul class="dropdown-list">
+          <li><a href="#">PPA</a></li>
+          <li><a href="#">LDO</a></li>
+          <li><a href="#">QDD</a></li>
+          <li><a href="#">LOA</a></li>
+        </ul>
+      </li>
+      <li class="card col-span-3">
+        <div class="card-img">
+          <img src="img/cards-icon/diarias.png" alt="covid">
+        </div>
+        <p class="card-name">Diarias</p>
+        <div class="vetor-card">
+          <img src="img/icons/point.png" alt="vetor-card-drop">
+        </div>
+      </li>
+      <li class="card col-span-3">
+        <div class="card-img">
+          <img src="img/cards-icon/passagens.png" alt="covid">
+        </div>
+        <p class="card-name">Passagens</p>
+        <div class="vetor-card">
+          <img src="img/icons/point.png" alt="vetor-card">
+        </div>
+      </li>
+      <li class="card col-span-3">
+        <div class="card-img">
+          <img src="img/cards-icon/organizacional.png" alt="covid">
+        </div>
+        <p class="card-name">Organizacional</p>
+        <div class="vetor-card">
+          <img src="img/icons/dropdown.png" alt="vetor-card-drop">
+        </div>
+      </li>
+      <li class="card col-span-3">
+        <div class="card-img">
+          <img src="img/cards-icon/relatorios.png" alt="covid">
+        </div>
+        <p class="card-name"> Gestão</p>
+        <div class="vetor-card">
+          <img src="img/icons/point.png" alt="vetor-card">
+        </div>
+      </li>
+      <li class="card col-span-3">
+        <div class="card-img">
+          <img src="img/cards-icon/prestacao.png" alt="covid">
+        </div>
+        <p class="card-name">Prestação de Contas</p>
+        <div class="vetor-card">
+          <img src="img/icons/dropdown.png" alt="vetor-card-drop">
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="esic-banner">
+    <p>Para saber mais sobre o E-SIC, clique <a href="#" class="internal-link">aqui</a>.</p>
+  </section>
+  <section class="info-section grid-container">
+    <div class="contact col-span-4">
+      <h1>Contato</h1>
+      <ul>
+        <li>
+          <p class="titulo-info">Prefeitura de Maribondo</p>
+          <p>(82)3270-1114 - 07:00 as 13:00</p>
+        </li>
+        <li>
+          <p class="titulo-info">Gabinete</p>
+          <p>(82)3270-1114 - 07:00 as 13:00</p>
+        </li>
+        <li>
+          <p class="titulo-info">Secretaria Municipal</p>
+          <p>(82)3270-1114 - 07:00 as 13:00</p>
+        </li>
+        <li class="division-line">
+          <p class="titulo-info">Secretaria Municipal da Saúde</p>
+          <p>(82)3270-1561 - 07:00 as 13:00</p>
+        </li>
+        <li class="division-line">
+          <p class="titulo-info">Secretaria Municipal da Saúde</p>
+          <p>prcturis@gmail.com</p>
+        </li>
+        <li>
+          <p class="titulo-info">Prefeitura de Maribondo</p>
+          <p>Rua José Sapucaia, 1, Centro - CEP: 57.520-000 Maribondo/AL</p>
+        </li>
+      </ul>
+    </div>
+    <div class="law col-span-4">
+      <h1>Leis Federais</h1>
+      <ul>
+        <li>
+          <a href="" class="titulo-info">Lei n. 9.755/98</a>
+        </li>
+        <li>
+          <a href="" class="titulo-info">Instrução Normativa n. 28/29</a>
+        </li>
+        <li>
+          <a href="" class="titulo-info">Lei de responsabilidade Fiscal</a>
+        </li>
+        <li>
+          <a href="" class="titulo-info">Lei de Transparência </a>
+        </li>
+        <li>
+          <a href="" class="titulo-info">Lei de Acesso a Informação</a>
+        </li>
+      </ul>
+    </div>
+    <div class="e-sic col-span-4">
+      <h1>E-SIC</h1>
+      <ul>
+        <li>
+          <p class="titulo-info">Secretaria de Administração</p>
+          <p>Rua José Sapucáia Nº 1
+            CEP: 57670-000</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="grid-container">
+      <p class="col-span-12">© 2001/2023 - Mega Assessoria, todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
