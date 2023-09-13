@@ -234,7 +234,7 @@
 .esic-banner p {
   color: #fff;
 }
-
+/*-----------------------Card Section-----------------------*/
 .cards-section {
   width: 100%;
   padding-top: 60px;
@@ -244,42 +244,56 @@
 
 .card {
   display: flex;
-  height: 140px;
+  height: 210px;
   background-color: #fff;
-  border: 1px solid #8bb5ff;
+  border-top: 4px solid #4a8cff;
   border-radius: 4px;
-  padding: 20px 25px;
+  padding: 25px 25px 40px 25px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   cursor: pointer;
   flex-direction: column;
   align-items: left;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
-}
 
-.card:hover {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  /*Card Typography*/
+
+  font-family: "Roboto", "sans-serif";
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: #787878;
+  max-width: 11.875rem;
 }
 
 .card-img {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
-.card p {
+.card-title {
   font-family: "Lato", "sans-serif";
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.1rem;
-  color: #404040;
-  margin-bottom: 20px;
+  color: #636b97;
+  margin-bottom: 8px;
+}
+
+.card:hover {
+  color: #fff;
+  background-color: #8bb5ff;
+}
+
+.card:hover .card-title,
+.card:hover p {
+  color: #fff;
 }
 
 .vetor-card {
+  margin-top: 25px;
   align-self: end;
 }
-.card.covid {
-  background-color: #8bb5ff;
-}
+
 .card.covid p {
   color: #fff;
 }
