@@ -6,7 +6,6 @@ export function dropDownCards() {
     const isDropdownClicked = dropdown.contains(e.target);
 
     if (!isDropdownClicked) {
-      this.classList.toggle("none");
       this.classList.toggle("active");
     } else {
       e.stopPropagation();

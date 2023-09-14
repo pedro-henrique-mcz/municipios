@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal da Transparencia - Maribondo</title>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,24 +105,22 @@
   <!--Cards Section-->
   <section class="cards-section">
     <ul class="cards grid-container">
-      <li class="card col-span-3">
-        <a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=combate_COVID_19">
-          <div class="card-img">
-            <img src="img/cards-icon/covid-icon.png" alt="covid">
-          </div>
-          <p class="card-title">Covid-19</p>
-          <p>Medidas e informações essenciais sobre a COVID-19.</p>
-          <div class="vetor-card">
-            <img src="img/icons/card-vector-desactive-2.png" class="vetor">
-          </div>
-        </a>
+      <li class="col-span-3 card" data-link="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=combate_COVID_19">
+        <div class="card-img">
+          <img src="img/cards-icon/covid-icon.png" alt="covid">
+        </div>
+        <p class="card-title">Covid-19</p>
+        <p class="card-text">Medidas e informações essenciais sobre a COVID-19.</p>
+        <div class="vetor-card">
+          <img src="img/icons/card-vector-desactive-2.png" class="vetor">
+        </div>
       </li>
-      <li class="card col-span-3 dropdown-card none">
+      <li class="card col-span-3 dropdown-card">
         <div class="card-img">
           <img src="img/cards-icon/legislacao-icon.png" alt="Legislacao">
         </div>
         <p class="card-title">Legislação</p>
-        <p> A transparência em todas as leis de Maribondo.</p>
+        <p class="card-text"> A transparência em todas as leis de Maribondo.</p>
         <div class="vetor-card">
           <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
         </div>
@@ -136,36 +135,32 @@
           <li><a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=gestao-democratica">Gestao Democratica</a></li>
         </ul>
       </li>
-      <li class="card col-span-3">
-        <a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=receitas">
-          <div class="card-img">
-            <img src="img/cards-icon/receita-icon.png" alt="receitas icone">
-          </div>
-          <p class="card-title">Receitas</p>
-          <p>Saiba mais sobre a arrecadação de fundos públicos e seu impacto.</p>
-          <div class="vetor-card">
-            <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
-          </div>
-        </a>
+      <li class="card col-span-3 " data-link="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=receitas">
+        <div class="card-img">
+          <img src="img/cards-icon/receita-icon.png" alt="receitas icone">
+        </div>
+        <p class="card-title">Receitas</p>
+        <p class="card-text">Saiba mais sobre a arrecadação de fundos públicos e seu impacto.</p>
+        <div class="vetor-card">
+          <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
+        </div>
       </li>
-      <li class="card col-span-3">
-        <a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=despesas">
-          <div class="card-img">
-            <img src="img/cards-icon/despesas-icon.png" alt="covid">
-          </div>
-          <p class="card-title">Despesas</p>
-          <p>Explore como os recursos são gastos para o benefício da comunidade.</p>
-          <div class="vetor-card">
-            <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
-          </div>
-        </a>
+      <li class="card col-span-3" data-link="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=despesas">
+        <div class="card-img">
+          <img src="img/cards-icon/despesas-icon.png" alt="covid">
+        </div>
+        <p class="card-title">Despesas</p>
+        <p class="card-text">Explore como os recursos são gastos para o benefício da comunidade.</p>
+        <div class="vetor-card">
+          <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
+        </div>
       </li>
-      <li class="card col-span-3 dropdown-card none">
+      <li class="card col-span-3 dropdown-card">
         <div class="card-img">
           <img src="img/cards-icon/servidores-icon.png" alt="covid">
         </div>
         <p class="card-title">Servidores</p>
-        <p>Conheça nossa equipe dedicada de servidores públicos.</p>
+        <p class="card-text">Conheça nossa equipe dedicada de servidores públicos.</p>
         <div class="vetor-card">
           <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
         </div>
@@ -174,48 +169,42 @@
           <li><a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=espelhoponto">Ponto Eletronico</a></li>
         </ul>
       </li>
-      <li class="card col-span-3">
-        <a href="https://portaldatransparencia.gov.br/convenios/consulta?paginacaoSimples=true&tamanhoPagina=&offset=&direcaoOrdenacao=asc&periodoVigenciaDe=01%2F01%2F2014&periodoVigenciaAte=31%2F01%2F2020&municipio=18655&colunasSelecionadas=linkDetalhamento%2CnumeroConvenio%2CnumeroOriginal%2Cuf%2CmunicipioConvenente%2Cobjetivo%2CorgaoSuperior%2Corgao%2Cconcedente%2Cconvenente%2CvalorConveniado&ordenarPor=orgao&direcao=desc">
-          <div class="card-img">
-            <img src="img/cards-icon/parceirias-icon.png" alt="covid">
-          </div>
-          <p class="card-title">Parcerias</p>
-          <p>Nossas colaborações estratégicas fortalecem a comunidade.</p>
-          <div class="vetor-card">
-            <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
-          </div>
-        </a>
+      <li class="card col-span-3" data-link="https://portaldatransparencia.gov.br/convenios/consulta?paginacaoSimples=true&tamanhoPagina=&offset=&direcaoOrdenacao=asc&periodoVigenciaDe=01%2F01%2F2014&periodoVigenciaAte=31%2F01%2F2020&municipio=18655&colunasSelecionadas=linkDetalhamento%2CnumeroConvenio%2CnumeroOriginal%2Cuf%2CmunicipioConvenente%2Cobjetivo%2CorgaoSuperior%2Corgao%2Cconcedente%2Cconvenente%2CvalorConveniado&ordenarPor=orgao&direcao=desc">
+        <div class="card-img">
+          <img src="img/cards-icon/parceirias-icon.png" alt="covid">
+        </div>
+        <p class="card-title">Parcerias</p>
+        <p class="card-text">Nossas colaborações estratégicas fortalecem a comunidade.</p>
+        <div class="vetor-card">
+          <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
+        </div>
       </li>
-      <li class="card col-span-3">
-        <a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=contratosaditivos">
-          <div class="card-img">
-            <img src="img/cards-icon/contratos-icon.png" alt="covid">
-          </div>
-          <p class="card-title">Contratos</p>
-          <p>Nossos contratos refletem nosso compromisso com a transparência.</p>
-          <div class="vetor-card">
-            <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
-          </div>
-        </a>
+      <li class="card col-span-3" data-link="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=contratosaditivos">
+        <div class="card-img">
+          <img src="img/cards-icon/contratos-icon.png" alt="covid">
+        </div>
+        <p class="card-title">Contratos</p>
+        <p class="card-text">Nossos contratos refletem nosso compromisso com a transparência.</p>
+        <div class="vetor-card">
+          <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
+        </div>
       </li>
-      <li class="card col-span-3">
-        <a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=licitacoes">
-          <div class="card-img">
-            <img src="img/cards-icon/licitacoes-icon.png" alt="licitacoes">
-          </div>
-          <p class="card-title">Licitações</p>
-          <p>Processos de licitação abertos e justos para melhor governança.</p>
-          <div class="vetor-card">
-            <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
-          </div>
-        </a>
+      <li class="card col-span-3" data-link="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=licitacoes">
+        <div class="card-img">
+          <img src="img/cards-icon/licitacoes-icon.png" alt="licitacoes">
+        </div>
+        <p class="card-title">Licitações</p>
+        <p class="card-text">Processos de licitação abertos e justos para melhor governança.</p>
+        <div class="vetor-card">
+          <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
+        </div>
       </li>
-      <li class="card col-span-3 dropdown-card none">
+      <li class="card col-span-3 dropdown-card">
         <div class="card-img">
           <img src="img/cards-icon/LRF-icon.png" alt="covid">
         </div>
         <p class="card-title">LRF</p>
-        <p>Transparência fiscal em conformidade com a Lei de Responsabilidade Fiscal</p>
+        <p class="card-text">Transparência fiscal em conformidade com a Lei de Responsabilidade Fiscal</p>
         <div class="vetor-card">
           <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
         </div>
@@ -228,12 +217,12 @@
           <li><a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=siops">SIOPS</a></li>
         </ul>
       </li>
-      <li class="card col-span-3 dropdown-card none">
+      <li class="card col-span-3 dropdown-card">
         <div class="card-img">
           <img src="img/cards-icon/orcamento-icon.png" alt="covid">
         </div>
-        <p class="card-title">Orcamento</p>
-        <p>Detalhes do nosso orçamento para um futuro sólido.</p>
+        <p class="card-title">Orçamento</p>
+        <p class="card-text">Detalhes do nosso orçamento para um futuro sólido.</p>
         <div class="vetor-card">
           <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
         </div>
@@ -244,67 +233,57 @@
           <li><a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=loa">LOA</a></li>
         </ul>
       </li>
-      <li class="card col-span-3">
-        <a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=diarias">
-          <div class="card-img">
-            <img src="img/cards-icon/diarias-icon.png" alt="covid">
-          </div>
-          <p class="card-title">Diarias</p>
-          <p>Despesas de diárias, refletindo nossa gestão responsável.</p>
-          <div class="vetor-card">
-            <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
-          </div>
-        </a>
+      <li class="card col-span-3" data-link="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=diarias">
+        <div class="card-img">
+          <img src="img/cards-icon/diarias-icon.png" alt="covid">
+        </div>
+        <p class="card-title">Diárias</p>
+        <p class="card-text">Despesas de diárias, refletindo nossa gestão responsável.</p>
+        <div class="vetor-card">
+          <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
+        </div>
       </li>
-      <li class="card col-span-3">
-        <a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=passagens">
-          <div class="card-img">
-            <img src="img/cards-icon/passagens-icon.png" alt="covid">
-          </div>
-          <p class="card-title">Passagens</p>
-          <p>Transparência nas despesas de viagem e passagens.</p>
-          <div class="vetor-card">
-            <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
-          </div>
-        </a>
+      <li class="card col-span-3" data-link="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=passagens">
+        <div class="card-img">
+          <img src="img/cards-icon/passagens-icon.png" alt="covid">
+        </div>
+        <p class="card-title">Passagens</p>
+        <p class="card-text">Transparência nas despesas de viagem e passagens.</p>
+        <div class="vetor-card">
+          <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
+        </div>
       </li>
-      <li class="card col-span-3">
-        <a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=estrutura">
-          <div class="card-img">
-            <img src="img/cards-icon/organizacao-icon.png" alt="covid">
-          </div>
-          <p class="card-title">Organizacional</p>
-          <p>Estrutura organizacional que mantém nossa cidade em movimento</p>
-          <div class="vetor-card">
-            <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
-          </div>
-        </a>
+      <li class="card col-span-3" data-link="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=estrutura">
+        <div class="card-img">
+          <img src="img/cards-icon/organizacao-icon.png" alt="covid">
+        </div>
+        <p class="card-title">Organizacional</p>
+        <p class="card-text">Estrutura organizacional que mantém nossa cidade em movimento</p>
+        <div class="vetor-card">
+          <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
+        </div>
       </li>
-      <li class="card col-span-3">
-        <a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=contaspublicas">
-          <div class="card-img">
-            <img src="img/cards-icon/gestao-icon.png" alt="covid">
-          </div>
-          <p class="card-title"> Gestão</p>
-          <p>Nossa abordagem de gestão para um governo eficaz.</p>
-          <div class="vetor-card">
-            <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
-          </div>
-        </a>
+      <li class="card col-span-3" data-link="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=contaspublicas">
+        <div class="card-img">
+          <img src="img/cards-icon/gestao-icon.png" alt="covid">
+        </div>
+        <p class="card-title"> Gestão</p>
+        <p class="card-text">Nossa abordagem de gestão para um governo eficaz.</p>
+        <div class="vetor-card">
+          <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
+        </div>
       </li>
-      <li class="card col-span-3">
-        <a href="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=prestacaoconta">
-          <div class="card-img">
-            <img src="img/cards-icon/prestacao-contas-icon.png" alt="covid">
-          </div>
-          <p class="card-title">Prestação de Contas</p>
-          <p>Prestação de contas à comunidade.</p>
-          <div class="vetor-card">
-            <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
-          </div>
-        </a>
+      <li class="card col-span-3" data-link="http://www.maribondo.al.gov.br/online/transparencia/index.php?index=prestacaoconta">
+        <div class="card-img">
+          <img src="img/cards-icon/prestacao-contas-icon.png" alt="covid">
+        </div>
+        <p class="card-title">Prestação de Contas</p>
+        <p class="card-text">Prestação de contas à comunidade.</p>
+        <div class="vetor-card">
+          <img src="img/icons/card-vector-desactive-2.png" alt="vetor-card" class="vetor">
+        </div>
       </li>
-      <!-------------------TESTE----------------------->
+
 
     </ul>
   </section>
@@ -345,19 +324,19 @@
       <h1>Leis Federais</h1>
       <ul>
         <li>
-          <a href="" class="titulo-info">Lei n. 9.755/98</a>
+          <a href="http://www.planalto.gov.br/ccivil_03/leis/L9755.htm" class="titulo-info">Lei n. 9.755/98</a>
         </li>
         <li>
-          <a href="" class="titulo-info">Instrução Normativa n. 28/29</a>
+          <a href="https://portal.tcu.gov.br/contas/contas-publicas/" class="titulo-info">Instrução Normativa n. 28/29</a>
         </li>
         <li>
-          <a href="" class="titulo-info">Lei de responsabilidade Fiscal</a>
+          <a href="http://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm" class="titulo-info">Lei de responsabilidade Fiscal</a>
         </li>
         <li>
-          <a href="" class="titulo-info">Lei de Transparência </a>
+          <a href="http://www.planalto.gov.br/ccivil_03/leis/lcp/lcp131.htm" class="titulo-info">Lei de Transparência </a>
         </li>
         <li>
-          <a href="" class="titulo-info">Lei de Acesso a Informação</a>
+          <a href="http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm" class="titulo-info">Lei de Acesso a Informação</a>
         </li>
       </ul>
     </div>
