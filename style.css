@@ -253,9 +253,8 @@
   cursor: pointer;
   flex-direction: column;
   align-items: left;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
-  margin-bottom: 20px;
 
   /*Card Typography*/
 
@@ -264,7 +263,11 @@
   font-weight: 400;
   letter-spacing: 0.1rem;
   color: #7e7e7e;
-  max-width: 11.875rem;
+}
+
+.card a {
+  text-decoration: none;
+  color: #7e7e7e;
 }
 
 .card-img {
@@ -282,16 +285,16 @@
 
 .card p {
   max-height: 50px;
-  max-width: 200px;
+  max-width: 190px;
 }
 
 .card:hover {
   color: #fff;
   background-color: #8bb5ff;
+  border-top: 4px solid #ff5b54;
 }
 
-.card:hover .card-title,
-.card:hover p {
+.card:hover .card-title {
   color: #fff;
 }
 
@@ -305,21 +308,17 @@
 }
 
 .dropdown-list {
+  display: block;
   position: absolute;
   min-width: 180px;
   border-radius: 4px;
   padding: 20px;
-  top: 190px;
-  left: -1px;
+  top: 250px;
+  left: 12px;
   background-color: #fff;
   border: 1px solid #8bb5ff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  z-index: 10;
-}
-
-.dropdown-card.none .dropdown-list {
-  display: none;
+  z-index: 5;
 }
 
 .dropdown-list li {
@@ -329,17 +328,45 @@
   letter-spacing: 0.1rem;
   color: #404040;
   margin-bottom: 20px;
+  z-index: 5;
 }
 
-.dropdown-list li:last-child {
-  margin-bottom: 0px;
+.dropdown-card.none .dropdown-list {
+  opacity: 0;
 }
 
-.dropdown-list li a {
-  text-decoration: none;
-  color: #404040;
+.dropdown-list li a:hover {
+  color: #0f61ef !important;
 }
 
+.dropdown-list ::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  bottom: -30px;
+  left: -30px;
+}
+
+.card.dropdown-card.active .vetor {
+  transform: rotate(90deg);
+}
+/*--------------NOVO CARD----------------*/
+.card-2 {
+  display: flex;
+  height: 210px;
+  background-color: #fff;
+  border-top: 4px solid #4a8cff;
+  border-radius: 4px;
+  padding: 25px;
+  flex-direction: column;
+  align-items: left;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/*----------------------------------------*/
 .info-section {
   padding-top: 60px;
   padding-bottom: 60px;
