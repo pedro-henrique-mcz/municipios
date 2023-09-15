@@ -1,0 +1,48 @@
+.main {
+  margin: 60px auto;
+  text-align: left;
+  position: relative;
+}
+
+.main-header {
+  margin-bottom: 40px;
+  max-width: 54rem;
+}
+
+.main-header h1 {
+  font-family: "Lato", "sans-serif";
+  font-weight: 600;
+  font-size: 2.25rem;
+  letter-spacing: 0.25%;
+  color: #0f61ef;
+  margin-bottom: 0.75rem;
+}
+
+.main::before {
+  content: "";
+  width: 0.875rem;
+  height: 1.25rem;
+  background-color: #f4632a;
+  border-radius: 2px;
+  position: absolute;
+  top: -1px;
+  left: -4px;
+  z-index: -1;
+}
+
+.main-header .breadcrump {
+  font-family: "Roboto", "sans-serif";
+  font-size: 1rem;
+  letter-spacing: 0.15%;
+  color: #9c9c9c;
+  margin-bottom: 0.75rem;
+}
+
+.main-header p {
+  font-family: "Roboto", "sans-serif";
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.15%;
+  line-height: 1.3rem;
+  color: #545454;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal da Transparencia - Maribondo</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/flavicon/favicon-16x16.png">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <header class="header">
+    <div class="info-header">
+      <div class="grid-container">
+        <div class="col-span-4 vertical-center">
+          <p>segunda a sexta-feira - 7:00 às 13:00hs - (82) 3270-1114</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="nav-header col-span-12">
+        <a href="#">
+          <img src="img/brasao-maribondo.png" alt="brasao de Maribondo">
+        </a>
+        <div class="contato-dropdown desativado">
+          <p>NOSSOS CONTATOS</p>
+          <img src="img/icons/contato-drop-down.png" alt="" class="imgdropdown">
+          <ul class="contato-dropdown-list none">
+            <li>
+              <p class="dropdown-name">Gabinete</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Administração</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Agricultura</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Assistência Social</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Cultura</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Finança</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Infraestrutura</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal de Saúde</p>
+              <p class="dropdown-number">(82)3270-1561</p>
+            </li>
+            <li>
+              <p class="dropdown-name">Secretaria Municipal Educação</p>
+              <p class="dropdown-number">(82)3270-1114</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!------------------MAIN SECTION---------------->
+  <section class="main grid-container">
+    <div class="main-header col-span-12">
+      <h1>Leis</h1>
+      <p class="breadcrump">Legislacao &#x21D2; Leis</p>
+      <p>Bem-vindo à seção de Leis e Legislação do Portal da Transparência. Aqui, você encontra informações sobre as leis que regem o governo e políticas públicas.</p>
+    </div>
+    <div class="dashboard">
+      <form action="">
+        <input type="text" class="search" id="search" placeholder="Pesquise">
+        <select name="mounth" id="mounth">
+          <option value="" disabled selected>Mês</option>
+          <option value="janeiro">Janeiro</option>
+          <option value="fevereiro">Fevereiro</option>
+          <option value="marco">Março</option>
+          <option value="abril">Abril</option>
+          <option value="maio">Maio</option>
+          <option value="junho">Junho</option>
+          <option value="julho">Julho</option>
+          <option value="agosto">Agosto</option>
+          <option value="setembro">Setembro</option>
+          <option value="outubro">Outubro</option>
+          <option value="novembro">Novembro</option>
+          <option value="dezembro">Dezembro</option>
+        </select>
+        <select name="year" id="year" class="year">
+          <option value="" disabled selected>Ano</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+        </select>
+        <button class="export">
+          <p>Exportar</p>
+          <img src="img/dashboard-icons/export.png" alt="Exportar">
+        </button>
+      </form>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="grid-container">
+      <p class="col-span-12">© 2001/2023 - Mega Assessoria, todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
