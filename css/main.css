@@ -24,6 +24,11 @@
 .col-span-4 {
   grid-column: span 4;
 }
+
+.col-span-6 {
+  grid-column: span 6;
+}
+
 .col-span-8 {
   grid-column: span 8;
 }

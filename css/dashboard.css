@@ -63,7 +63,7 @@
   justify-content: space-between;
 }
 
-.search,
+.search::placeholder,
 .placeholder-select,
 .mounth-options,
 .year-options,
@@ -86,8 +86,7 @@
 }
 
 .search:focus {
-  border: 2px solid #0f61ef;
-  outline: none;
+  outline: 2px solid #0f61ef;
 }
 
 .select {
@@ -165,7 +164,6 @@
   box-sizing: border-box;
   border-radius: 3px;
   cursor: pointer;
-  margin-right: 0.975rem;
   gap: 6px;
   align-self: flex-end;
   position: relative;
@@ -188,4 +186,68 @@
 }
 .download-options div {
   padding: 12px;
+}
+
+/*--------------Dashboard Header----------------*/
+
+.dashboard-info,
+.dashboard-row {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 41% 13% 8% 8%;
+  gap: 10%;
+  max-width: 100%;
+}
+
+.dashboard-info,
+.dashboard-row {
+  font-family: "Lato", "sans-ferif";
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.15%;
+  text-align: left;
+  color: #3b485f;
+  padding: 2.5rem 0 1.25rem 0;
+}
+.dashboard-row {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+  padding: 0%;
+  border-top: 2px solid #c9d2dd;
+  padding: 20px 0 20px 0;
+}
+
+.dashboard-title,
+.dashboard-title-row {
+  grid-column: 1 / span 1;
+}
+
+.dashboard-data,
+.dashboard-data-row {
+  grid-column: 2 / span 1;
+}
+
+.dashboard-download,
+.dashboard-download-row {
+  grid-column: 3 / span 1;
+}
+
+.dashboard-description,
+.dashboard-description-row {
+  text-align: right;
+  grid-column: 4 / span 1;
+}
+
+.download,
+.description {
+  position: relative;
+}
+
+.download {
+  left: 30px;
+}
+
+.description {
+  right: 30px;
 }
