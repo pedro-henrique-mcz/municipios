@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="16x16" href="img/flavicon/favicon-16x16.png">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <meta name="msapplication-TileColor" content="#ffffff">
@@ -86,41 +87,60 @@
       <p class="breadcrump">Legislacao &#x21D2; Leis</p>
       <p>Bem-vindo à seção de Leis e Legislação do Portal da Transparência. Aqui, você encontra informações sobre as leis que regem o governo e políticas públicas.</p>
     </div>
-    <div class="dashboard">
-      <form action="">
-        <input type="text" class="search" id="search" placeholder="Pesquise">
-        <select name="mounth" id="mounth">
-          <option value="" disabled selected>Mês</option>
-          <option value="janeiro">Janeiro</option>
-          <option value="fevereiro">Fevereiro</option>
-          <option value="marco">Março</option>
-          <option value="abril">Abril</option>
-          <option value="maio">Maio</option>
-          <option value="junho">Junho</option>
-          <option value="julho">Julho</option>
-          <option value="agosto">Agosto</option>
-          <option value="setembro">Setembro</option>
-          <option value="outubro">Outubro</option>
-          <option value="novembro">Novembro</option>
-          <option value="dezembro">Dezembro</option>
-        </select>
-        <select name="year" id="year" class="year">
-          <option value="" disabled selected>Ano</option>
-          <option value="2014">2014</option>
-          <option value="2015">2015</option>
-          <option value="2016">2016</option>
-          <option value="2017">2017</option>
-          <option value="2018">2018</option>
-          <option value="2019">2019</option>
-          <option value="2020">2020</option>
-          <option value="2021">2021</option>
-          <option value="2022">2022</option>
-          <option value="2023">2023</option>
-        </select>
-        <button class="export">
-          <p>Exportar</p>
-          <img src="img/dashboard-icons/export.png" alt="Exportar">
-        </button>
+    <div class="dashboard col-span-12">
+      <form action="" class="form">
+        <div class="form-actions">
+          <div class="form-interacts">
+            <input type="text" class="search" placeholder='&#128269; Pesquisar'>
+            <div class="select" id="dropdown">
+              <div class="placeholder-select">
+                <p>Mês</p>
+                <p>&#x23F7;</p>
+              </div>
+              <div class="mounth-options">
+                <div data-value="Janeiro">Janeiro</div>
+                <div data-value="Fevereiro">Fevereiro</div>
+                <div data-value="Março">Março</div>
+                <div data-value="Abril">Abril</div>
+                <div data-value="Maio">Maio</div>
+                <div data-value="Junho">Junho</div>
+                <div data-value="Julho">Julho</div>
+                <div data-value="Agosto">Agosto</div>
+                <div data-value="Setembro">Setembro</div>
+                <div data-value="Outubro">Outubro</div>
+                <div data-value="Novembro">Novembro</div>
+                <div data-value="Dezembro">Dezembro</div>
+              </div>
+            </div>
+            <div class="select year" id="dropdown">
+              <div class="placeholder-select">
+                <p>Ano</p>
+                <p>&#x23F7;</p>
+              </div>
+              <div class="year-options">
+                <div data-value="2014">2014</div>
+                <div data-value="2015">2015</div>
+                <div data-value="2016">2016</div>
+                <div data-value="2017">2017</div>
+                <div data-value="2018">2018</div>
+                <div data-value="2019">2019</div>
+                <div data-value="2020">2020</div>
+                <div data-value="2021">2021</div>
+                <div data-value="2022">2022</div>
+                <div data-value="2023">2023</div>
+              </div>
+            </div>
+          </div>
+          <button class="export" id="dropdown" data-test="export">
+            <p>Exporta </p>
+            <img src="img/dashboard-icons/export.png" alt="Exportar">
+            <p> &#x23F7;</p>
+            <div class="download-options">
+              <div data-download="XML">XML</div>
+              <div data-download="CSV">CSV</div>
+            </div>
+          </button>
+        </div>
       </form>
     </div>
   </section>
