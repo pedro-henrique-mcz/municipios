@@ -1,9 +1,6 @@
 export function dashboard() {
   const dropdownForms = document.querySelectorAll("#dropdown");
   const selects = document.querySelectorAll(".select");
-  const search = document.querySelector(".search");
-
-  search.addEventListener("click", e);
 
   /*Dropdowns page */
   dropdownForms.forEach((form) => {
@@ -22,15 +19,19 @@ export function dashboard() {
       if (form.classList.contains("export")) {
         e.preventDefault();
       }
-      console.log(e.target);
     });
   });
 
   /*Research system*/
-  function performSearch() {
+  function performSearch(dataContent, dataType) {
+    /*Input text search*/
     const searchQuery = document
       .querySelector("#search-term")
       .value.toLowerCase();
+
+    /*If the information is provided from year ou mounth selects*/
+    const dataQuery = dataContent;
+    const dataActualType = dataType;
 
     const rows = document.querySelectorAll(".dashboard-row");
 
@@ -42,30 +43,74 @@ export function dashboard() {
         .querySelector(".dashboard-data-row p")
         .textContent.toLowerCase();
 
-      if (searchQuery === "") {
-        row.style.display = "grid";
-      } else if (title.includes(searchQuery) || date.includes(searchQuery)) {
-        row.style.display = "grid";
-      } else {
-        row.style.display = "none";
+      if (dataQuery == null && dataActualType == null) {
+        if (searchQuery === "") {
+          row.style.display = "grid";
+        } else if (title.includes(searchQuery) || date.includes(searchQuery)) {
+          row.style.display = "grid";
+          console.log(dataQuery);
+        } else {
+          row.style.display = "none";
+        }
+      } else if (dataActualType === "year") {
+        if (date.includes(dataQuery)) {
+          row.style.display = "grid";
+        } else {
+          row.style.display = "none";
+        }
+      } else if (dataActualType === "mounth") {
+        let actualMounth = returnMounth(dataQuery);
+        if (date.includes(actualMounth)) {
+          row.style.display = "grid";
+        } else {
+          row.style.display = "none";
+        }
       }
     });
+  }
+
+  function returnMounth(mounth) {
+    const mounths = {
+      Janeiro: 1,
+      Fevereiro: 2,
+      Março: 3,
+      Abril: 4,
+      Maio: 5,
+      Junho: 6,
+      Julho: 7,
+      Agosto: 8,
+      Setembro: 9,
+      Outubro: 10,
+      Novembro: 11,
+      Dezembro: 12,
+    };
+
+    const numericMounth = mounths[mounth];
+
+    if (numericMounth !== undefined) {
+      return numericMounth;
+    }
   }
 
   document
     .querySelector("#search-term")
     .addEventListener("keydown", function (event) {
       if (event.key === "Enter") {
-        performSearch();
+        performSearch(null, null);
       }
     });
 
   const dropdownItems = document.querySelectorAll(
     ".mounth-options div, .year-options div"
   );
+
   dropdownItems.forEach(function (item) {
-    item.addEventListener("click", function () {
-      performSearch();
+    item.addEventListener("click", function (e) {
+      if (item.dataset.mounth) {
+        performSearch(e.target.textContent, "mounth");
+      } else if (item.dataset.year) {
+        performSearch(e.target.textContent, "year");
+      }
     });
   });
 }

@@ -145,11 +145,13 @@
   width: 5rem;
 }
 
-[data-value] {
+[data-mounth],
+[data-year] {
   padding: 0.475rem;
 }
 
-[data-value]:hover {
+[data-mounth]:hover,
+[data-year]:hover {
   color: #fff;
 }
 
