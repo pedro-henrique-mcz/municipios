@@ -1,11 +1,13 @@
 export function dashboard() {
   const dropdownForms = document.querySelectorAll("#dropdown");
-  const exporting = document.querySelector(".export");
   const selects = document.querySelectorAll(".select");
+  const search = document.querySelector(".search");
+
+  search.addEventListener("click", e);
 
   /*Dropdowns page */
   dropdownForms.forEach((form) => {
-    form.addEventListener("click", () => {
+    form.addEventListener("click", (e) => {
       if (form.classList.contains("active")) {
         form.classList.toggle("active");
       } else {
@@ -17,11 +19,14 @@ export function dashboard() {
       if (form.classList.contains("dashboard-description-row-button")) {
         form.nextElementSibling.classList.toggle("active");
       }
+      if (form.classList.contains("export")) {
+        e.preventDefault();
+      }
+      console.log(e.target);
     });
   });
 
   /*Research system*/
-  // Function to perform the search
   function performSearch() {
     const searchQuery = document
       .querySelector("#search-term")
@@ -38,16 +43,15 @@ export function dashboard() {
         .textContent.toLowerCase();
 
       if (searchQuery === "") {
-        row.style.display = "grid"; // Display the row if nothing is searched
+        row.style.display = "grid";
       } else if (title.includes(searchQuery) || date.includes(searchQuery)) {
-        row.style.display = "grid"; // Display the row if it matches the search query
+        row.style.display = "grid";
       } else {
-        row.style.display = "none"; // Hide the row if it doesn't match the search query
+        row.style.display = "none";
       }
     });
   }
 
-  // Add an event listener for the Enter key
   document
     .querySelector("#search-term")
     .addEventListener("keydown", function (event) {
@@ -56,7 +60,6 @@ export function dashboard() {
       }
     });
 
-  // Add event listeners for month and year dropdown selections
   const dropdownItems = document.querySelectorAll(
     ".mounth-options div, .year-options div"
   );
@@ -64,9 +67,5 @@ export function dashboard() {
     item.addEventListener("click", function () {
       performSearch();
     });
-  });
-
-  exporting.addEventListener("click", (e) => {
-    e.preventDefault();
   });
 }

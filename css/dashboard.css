@@ -67,7 +67,8 @@
 .placeholder-select,
 .mounth-options,
 .year-options,
-.download-options {
+.download-options,
+.export {
   font-family: "Roboto", "sans-serif";
   font-weight: 400;
   font-size: 0.875rem;
@@ -160,7 +161,7 @@
   border: 1px solid #8cb6ff;
   padding: 13px;
   height: 2.5rem;
-  width: 7rem;
+  width: 8rem;
   box-sizing: border-box;
   border-radius: 3px;
   cursor: pointer;

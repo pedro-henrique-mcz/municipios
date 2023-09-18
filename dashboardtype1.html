@@ -90,7 +90,7 @@
           <p>Bem-vindo à seção de Leis e Legislação do Portal da Transparência. Aqui, você encontra informações sobre as leis que regem o governo e políticas públicas.</p>
         </div>
         <div class="dashboard col-span-12">
-          <form action="" class="form">
+          <form action="" class="form" onsubmit="return false;">
             <div class="form-actions">
               <div class="form-interacts">
                 <input type="text" class="search" placeholder='&#128269; Pesquisar' id="search-term">
@@ -133,7 +133,7 @@
                   </div>
                 </div>
               </div>
-              <button class="export" id="dropdown" data-test="export">
+              <div class="export" id="dropdown">
                 <p>Exporta </p>
                 <img src="img/dashboard-icons/export.png" alt="Exportar">
                 <p> &#x23F7;</p>
@@ -141,7 +141,7 @@
                   <div data-download="XML">XML</div>
                   <div data-download="CSV">CSV</div>
                 </div>
-              </button>
+              </div>
             </div>
           </form>
           <div class="dashboard-info">
