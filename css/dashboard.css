@@ -218,6 +218,10 @@
   padding: 20px 0 20px 0;
 }
 
+.dashboard-description-row-button.active .description img {
+  transform: rotate(180deg);
+}
+
 .dashboard-title,
 .dashboard-title-row {
   grid-column: 1 / span 1;
@@ -234,14 +238,27 @@
 }
 
 .dashboard-description,
-.dashboard-description-row {
+.dashboard-description-row-button {
   text-align: right;
   grid-column: 4 / span 1;
+}
+
+.dashboard-description-row {
+  display: none;
+  color: #52565e;
+  text-align: left;
+  grid-column: 1 / span 2;
+  margin: 10px 0;
+}
+
+.dashboard-description-row.active {
+  display: block;
 }
 
 .download,
 .description {
   position: relative;
+  cursor: pointer;
 }
 
 .download {
