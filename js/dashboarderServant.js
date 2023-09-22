@@ -28,24 +28,9 @@ export function dashboard() {
   /*Research system*/
   function performSearch(dataContent, dataType) {
     /*Input text search*/
-    let searchQuery = document.querySelector("#search-term").value;
-
-    if (searchQuery) {
-      if (cleanInput(searchQuery) !== "") {
-        searchQuery = cleanInput(searchQuery);
-      } else {
-        searchQuery = searchQuery.toLowerCase();
-      }
-    }
-
-    /*Input CPF*/
-    const idQuery = document.querySelector("#search-CPF").value;
-    /*Auth cpf*/
-    if (idQuery) {
-      if (cleanInput(idQuery) == "") {
-        alert("digite um cpf valido");
-      }
-    }
+    const searchQuery = document
+      .querySelector("#search-term")
+      .value.toLowerCase();
 
     /*If the information is provided from year ou mounth selects*/
     const dataQuery = dataContent;
@@ -54,54 +39,22 @@ export function dashboard() {
     const rows = document.querySelectorAll(".dashboard-row");
 
     rows.forEach(function (row) {
-      const serverEnrollment = cleanInput(
-        row.querySelector(".dashboard-enrollment-row p").textContent
-      );
-
-      const serverId = cleanInput(
-        row.querySelector(".dashboard-CPF-row p").textContent
-      );
-
-      const serverName = row
-        .querySelector(".dashboard-servant-row p")
+      const title = row
+        .querySelector(".dashboard-title-row p")
         .textContent.toLowerCase();
-
-      const serverOccupation = row
-        .querySelector(".dashboard-occupation-row p")
+      const date = row
+        .querySelector(".dashboard-data-row p")
         .textContent.toLowerCase();
+      const CPF = row.querySelector(".");
 
       if (dataQuery == null && dataActualType == null) {
-        if (searchQuery.trim() != "" && idQuery.trim() != "") {
-          if (
-            (serverEnrollment.includes(searchQuery) ||
-              serverId.includes(searchQuery) ||
-              serverName.includes(searchQuery) ||
-              serverOccupation.includes(searchQuery)) &&
-            serverId.includes(idQuery)
-          ) {
-            row.style.display = "grid";
-          } else {
-            row.style.display = "none";
-          }
-        } else if (idQuery.trim() != "") {
-          if (serverId.includes(idQuery)) {
-            row.style.display = "grid";
-          } else {
-            row.style.display = "none";
-          }
-        } else if (searchQuery.trim() != "") {
-          if (
-            serverEnrollment.includes(searchQuery) ||
-            serverId.includes(searchQuery) ||
-            serverName.includes(searchQuery) ||
-            serverOccupation.includes(searchQuery)
-          ) {
-            row.style.display = "grid";
-          } else {
-            row.style.display = "none";
-          }
-        } else {
+        if (searchQuery === "") {
           row.style.display = "grid";
+        } else if (title.includes(searchQuery) || date.includes(searchQuery)) {
+          row.style.display = "grid";
+          console.log(dataQuery);
+        } else {
+          row.style.display = "none";
         }
       } else if (dataActualType === "year") {
         if (date.includes(dataQuery)) {
@@ -118,14 +71,6 @@ export function dashboard() {
         }
       }
     });
-  }
-
-  function isNotNaN(value) {
-    return !isNaN(value);
-  }
-
-  function cleanInput(input) {
-    return input.replace(/\D/g, "").toString();
   }
 
   function returnMounth(mounth) {
@@ -153,14 +98,6 @@ export function dashboard() {
 
   document
     .querySelector("#search-term")
-    .addEventListener("keydown", function (event) {
-      if (event.key === "Enter") {
-        performSearch(null, null);
-      }
-    });
-
-  document
-    .querySelector("#search-CPF")
     .addEventListener("keydown", function (event) {
       if (event.key === "Enter") {
         performSearch(null, null);

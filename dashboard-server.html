@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal da Transparencia - Maribondo</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/dashboard-server.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/flavicon/favicon-16x16.png">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="info-header">
+          <div class="grid-container">
+            <div class="col-span-4 vertical-center">
+              <p>segunda a sexta-feira - 7:00 às 13:00hs - (82) 3270-1114</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-container">
+          <div class="nav-header col-span-12">
+            <a href="#">
+              <img src="img/brasao-maribondo.png" alt="brasao de Maribondo">
+            </a>
+            <div class="contato-dropdown desativado">
+              <p>NOSSOS CONTATOS</p>
+              <img src="img/icons/contato-drop-down.png" alt="" class="imgdropdown">
+              <ul class="contato-dropdown-list none">
+                <li>
+                  <p class="dropdown-name">Gabinete</p>
+                  <p class="dropdown-number">(82)3270-1114</p>
+                </li>
+                <li>
+                  <p class="dropdown-name">Secretaria Municipal de Administração</p>
+                  <p class="dropdown-number">(82)3270-1114</p>
+                </li>
+                <li>
+                  <p class="dropdown-name">Secretaria Municipal de Agricultura</p>
+                  <p class="dropdown-number">(82)3270-1114</p>
+                </li>
+                <li>
+                  <p class="dropdown-name">Secretaria Municipal de Assistência Social</p>
+                  <p class="dropdown-number">(82)3270-1114</p>
+                </li>
+                <li>
+                  <p class="dropdown-name">Secretaria Municipal de Cultura</p>
+                  <p class="dropdown-number">(82)3270-1114</p>
+                </li>
+                <li>
+                  <p class="dropdown-name">Secretaria Municipal de Finança</p>
+                  <p class="dropdown-number">(82)3270-1114</p>
+                </li>
+                <li>
+                  <p class="dropdown-name">Secretaria Municipal de Infraestrutura</p>
+                  <p class="dropdown-number">(82)3270-1114</p>
+                </li>
+                <li>
+                  <p class="dropdown-name">Secretaria Municipal de Saúde</p>
+                  <p class="dropdown-number">(82)3270-1561</p>
+                </li>
+                <li>
+                  <p class="dropdown-name">Secretaria Municipal Educação</p>
+                  <p class="dropdown-number">(82)3270-1114</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!------------------MAIN SECTION---------------->
+      <section class="main grid-container">
+        <div class="main-header col-span-12">
+          <h1>Servidores</h1>
+          <p class="breadcrump">Servidores &#x21D2; Relação</p>
+          <p>Explore nossa seção de Servidores Públicos para obter informações transparentes sobre aqueles que servem à nossa comunidade. Descubra detalhes sobre responsabilidades e remunerações, promovendo a transparência em nossa administração.</p>
+        </div>
+        <div class="dashboard col-span-12">
+          <form action="" class="form" onsubmit="return false;">
+            <div class="form-actions">
+              <div class="form-interacts">
+                <input type="text" class="search" placeholder='&#128269; Pesquisar' id="search-term">
+                <input type="text" class="search-CPF" placeholder='CPF' id="search-CPF">
+                <div class="select" id="dropdown">
+                  <div class="placeholder-select">
+                    <p>Mês</p>
+                    <p>&#x23F7;</p>
+                  </div>
+                  <div class="mounth-options">
+                    <div data-mounth="Janeiro">Janeiro</div>
+                    <div data-mounth="Fevereiro">Fevereiro</div>
+                    <div data-mounth="Março">Março</div>
+                    <div data-mounth="Abril">Abril</div>
+                    <div data-mounth="Maio">Maio</div>
+                    <div data-mounth="Junho">Junho</div>
+                    <div data-mounth="Julho">Julho</div>
+                    <div data-mounth="Agosto">Agosto</div>
+                    <div data-mounth="Setembro">Setembro</div>
+                    <div data-mounth="Outubro">Outubro</div>
+                    <div data-mounth="Novembro">Novembro</div>
+                    <div data-mounth="Dezembro">Dezembro</div>
+                  </div>
+                </div>
+                <div class="select year" id="dropdown">
+                  <div class="placeholder-select">
+                    <p>Ano</p>
+                    <p>&#x23F7;</p>
+                  </div>
+                  <div class="year-options">
+                    <div data-year="2014">2014</div>
+                    <div data-year="2015">2015</div>
+                    <div data-year="2016">2016</div>
+                    <div data-year="2017">2017</div>
+                    <div data-year="2018">2018</div>
+                    <div data-year="2019">2019</div>
+                    <div data-year="2020">2020</div>
+                    <div data-year="2021">2021</div>
+                    <div data-year="2022">2022</div>
+                    <div data-year="2023">2023</div>
+                  </div>
+                </div>
+              </div>
+              <div class="export" id="dropdown">
+                <p>Exporta </p>
+                <img src="img/dashboard-icons/export.png" alt="Exportar">
+                <p> &#x23F7;</p>
+                <div class="download-options">
+                  <div data-download="XML">XML</div>
+                  <div data-download="CSV">CSV</div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!------DAHSBOARD HEADER------>
+          <div class="dashboard-info">
+            <div class="dashboard-enrollment">
+              <p>Matrícula</p>
+            </div>
+            <div class="dashboard-CPF">
+              <p>CPF</p>
+            </div>
+            <div class="dashboard-servant">
+              <p>Servidor</p>
+            </div>
+            <div class="dashboard-occupation">
+              <p>Cargo</p>
+            </div>
+            <div class="dashboard-details last-column">
+              <p>Detalhes</p>
+            </div>
+          </div>
+          <!------DAHSBOARD ROWS------>
+          <div class="dashboard-row">
+            <div class="dashboard-enrollment-row">
+              <p>393-0</p>
+            </div>
+            <div class="dashboard-CPF-row">
+              <p>113.161.494-12</p>
+            </div>
+            <div class="dashboard-servant-row">
+              <p>Pedro Henrique De Souza Oliveira</p>
+            </div>
+            <div class="dashboard-occupation-row">
+              <p>Coordenador de Tecnologia</p>
+            </div>
+            <div class="dashboard-details-row" id="dropdown">
+              <div class="details-icon">
+                <img src="img/dashboard-icons/descrition-row.png" alt="descricao">
+              </div>
+            </div>
+            <!--ROW DETAILS-->
+            <div class="details-sub-row">
+              <div class="gross-salary-row">
+                <p>Sal. Bruto</p>
+                <p>R$ 3760</p>
+              </div>
+              <div class="net-salary-row">
+                <p>Sal. Líquido</p>
+                <p>R$ 3160</p>
+              </div>
+              <div class="deductions-row">
+                <p>Descontos</p>
+                <p>600 R$</p>
+              </div>
+              <div class="payroll-period-row">
+                <p>Competência</p>
+                <p>MENSAL</p>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-row">
+            <div class="dashboard-enrollment-row">
+              <p>424-0</p>
+            </div>
+            <div class="dashboard-CPF-row">
+              <p>142.442.987-08</p>
+            </div>
+            <div class="dashboard-servant-row">
+              <p>Jose Alvaro de Oliveira</p>
+            </div>
+            <div class="dashboard-occupation-row">
+              <p>Diretor de Tecnologia</p>
+            </div>
+            <div class="dashboard-details-row" id="dropdown">
+              <div class="details-icon">
+                <img src="img/dashboard-icons/descrition-row.png" alt="descricao">
+              </div>
+            </div>
+            <!--ROW DETAILS-->
+            <div class="details-sub-row">
+              <div class="gross-salary-row">
+                <p>Sal. Bruto</p>
+                <p>R$ 9760</p>
+              </div>
+              <div class="net-salary-row">
+                <p>Sal. Líquido</p>
+                <p>R$ 8160</p>
+              </div>
+              <div class="deductions-row">
+                <p>Descontos</p>
+                <p>1600 R$</p>
+              </div>
+              <div class="payroll-period-row">
+                <p>Competência</p>
+                <p>MENSAL</p>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-row">
+            <div class="dashboard-enrollment-row">
+              <p>423-0</p>
+            </div>
+            <div class="dashboard-CPF-row">
+              <p>889.975.454.11</p>
+            </div>
+            <div class="dashboard-servant-row">
+              <p>Edriana Cirilo de Souza</p>
+            </div>
+            <div class="dashboard-occupation-row">
+              <p>Super Intendente</p>
+            </div>
+            <div class="dashboard-details-row" id="dropdown">
+              <div class="details-icon">
+                <img src="img/dashboard-icons/descrition-row.png" alt="descricao">
+              </div>
+            </div>
+            <!--ROW DETAILS-->
+            <div class="details-sub-row">
+              <div class="gross-salary-row">
+                <p>Sal. Bruto</p>
+                <p>R$ 11760</p>
+              </div>
+              <div class="net-salary-row">
+                <p>Sal. Líquido</p>
+                <p>R$ 10160</p>
+              </div>
+              <div class="deductions-row">
+                <p>Descontos</p>
+                <p>1600 R$</p>
+              </div>
+              <div class="payroll-period-row">
+                <p>Competência</p>
+                <p>MENSAL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="grid-container">
+        <p class="col-span-12">© 2001/2023 - Mega Assessoria, todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

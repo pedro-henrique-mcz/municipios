@@ -1,0 +1,133 @@
+.search-CPF {
+  font-family: "Roboto", "sans-serif";
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.15%;
+
+  display: flex;
+  align-items: center;
+  background-color: #c9d2dd;
+  padding: 13px;
+  height: 2.5rem;
+  width: 9rem;
+  box-sizing: border-box;
+  border-radius: 3px;
+  justify-content: space-between;
+  cursor: pointer;
+  border: none;
+  margin-right: 0.975rem;
+}
+
+.search-CPF::placeholder {
+  color: #64799c;
+}
+
+.search-CPF:hover {
+  outline: 2px solid #0f61ef;
+}
+
+.search-CPF:focus {
+  outline: 2px solid #0f61ef;
+}
+
+.dashboard-row {
+  padding: 15px 0;
+}
+
+.dashboard-enrollment-row,
+.dashboard-CPF-row,
+.dashboard-servant-row,
+.dashboard-occupation-row,
+.detail-icon {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-details-row {
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+}
+
+.details-icon {
+  padding-left: 20px;
+}
+
+.dashboard-info,
+.dashboard-row {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 13% 20% 27% 12% 8%;
+  gap: 5%;
+  max-width: 100%;
+}
+
+.dashboard-enrollment,
+.dashboard-enrollment-row {
+  grid-column: 1 / span 1;
+}
+
+.dashboard-CPF,
+.dashboard-CPF-row {
+  grid-column: 2 / span 1;
+}
+
+.dashboard-servant,
+.dashboard-servant-row {
+  grid-column: 3 / span 1;
+}
+
+.dashboard-occupation,
+.dashboard-occupation-row {
+  line-height: 1.2rem;
+  grid-column: 4 / span 1;
+}
+
+.dashboard-details,
+.dashboard-details-row {
+  grid-column: 5 / span 1;
+}
+
+.last-column {
+  text-align: right;
+}
+
+.dashboard-occupation-row {
+  line-height: 1.2rem;
+}
+
+div .details-sub-row {
+  padding-top: 10px;
+  box-sizing: border-box;
+  display: none;
+  grid-template-columns: 13% 20% 27% 12% 8%;
+  gap: 5%;
+  max-width: 100%;
+  color: #52565e;
+  text-align: left;
+  grid-column: 1 / span 5;
+  padding-bottom: 15px;
+}
+div .details-sub-row.active {
+  display: grid;
+}
+
+.gross-salary-row {
+  grid-column: 1 / span 1;
+}
+
+.net-salary-row {
+  grid-column: 2 / span 1;
+}
+
+.gross-salary-row :first-child,
+.net-salary-row :first-child,
+.deductions-row :first-child,
+.payroll-period-row :first-child {
+  font-family: Lato, sans-ferif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: left;
+  color: #3b485f;
+  margin-bottom: 0.43rem;
+}
