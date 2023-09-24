@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/dashboard.css">
   <link rel="stylesheet" href="css/dashboard-server.css">
+  <link rel="stylesheet" href="css/dashboard-bidding.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto" rel="stylesheet">
@@ -86,22 +87,64 @@
       <!------------------MAIN SECTION---------------->
       <section class="main grid-container">
         <div class="main-header col-span-12">
-          <h1>Servidores</h1>
-          <p class="breadcrump">Servidores &#x21D2; Relação</p>
-          <p>Explore nossa seção de Servidores Públicos para obter informações transparentes sobre aqueles que servem à nossa comunidade. Descubra detalhes sobre responsabilidades e remunerações, promovendo a transparência em nossa administração.</p>
+          <h1>Licitação</h1>
+          <p class="breadcrump">Licitação &#x21D2; Relação</p>
+          <p>Bem-vindo à secção de licitações do Portal da Transparência de Maribondo. Esta página é dedicada a garantir que os processos de licitação da nossa cidade sejam transparentes, justos e acessíveis a todos os interessados.</p>
         </div>
         <div class="dashboard col-span-12">
           <form action="" class="form" onsubmit="return false;">
             <div class="form-actions">
               <div class="form-interacts">
                 <input type="text" class="search" placeholder='&#128269; Pesquisar' id="search-term">
-                <input type="text" class="search-CPF" placeholder='CPF' id="search-CPF">
                 <div class="select" id="dropdown">
+                  <div class="placeholder-select">
+                    <p>Modalidade</p>
+                    <p>&#x23F7;</p>
+                  </div>
+                  <div class="modality-options" id="modality">
+                    <div data-modality="Anulada">Anulada</div>
+                    <div data-modality="Carta Convite">Carta Convite</div>
+                    <div data-modality="Concorrência Pública">Concorrência Pública</div>
+                    <div data-modality="Concurso">Concurso</div>
+                    <div data-modality="Deserta">Deserta</div>
+                    <div data-modality="Dispensa">Dispensa</div>
+                    <div data-modality="Inexigibilidade">Inexigibilidade</div>
+                    <div data-modality="Leilão">Leilão</div>
+                    <div data-modality="Outros">Outros</div>
+                    <div data-modality="Pregão Eletrônico">Pregão Eletrônico</div>
+                    <div data-modality="Pregão Presencial">Pregão Presencial</div>
+                    <div data-modality="Revogada">Revogada</div>
+                    <div data-modality="Tomada de Preço">Tomada de Preço</div>
+                    <div data-modality="Publicações">Publicações</div>
+                    <input type="hidden" value="">
+                  </div>
+                </div>
+                <div class="select" id="dropdown">
+                  <div class="placeholder-select">
+                    <p>Situação</p>
+                    <p>&#x23F7;</p>
+                  </div>
+                  <div class="situation-options" id="situation">
+                    <div data-situation="Em andamento">Em andamento</div>
+                    <div data-situation="Publicada">Publicada</div>
+                    <div data-situation="Homologada">Homologada</div>
+                    <div data-situation="Ratificada">Ratificada</div>
+                    <div data-situation="Revogada">Revogada</div>
+                    <div data-situation="Cancelada">Cancelada</div>
+                    <div data-situation="Anulada">Anulada</div>
+                    <div data-situation="Deserta">Deserta</div>
+                    <div data-situation="Fracassada">Fracassada</div>
+                    <div data-situation="Finalizado">Finalizado</div>
+                    <div data-situation="Suspensa">Suspensa</div>
+                    <input type="hidden" value="">
+                  </div>
+                </div>
+                <div class="select mounth" id="dropdown">
                   <div class="placeholder-select">
                     <p>Mês</p>
                     <p>&#x23F7;</p>
                   </div>
-                  <div class="mounth-options">
+                  <div class="mounth-options" id="mounth">
                     <div data-mounth="Janeiro">Janeiro</div>
                     <div data-mounth="Fevereiro">Fevereiro</div>
                     <div data-mounth="Março">Março</div>
@@ -114,6 +157,7 @@
                     <div data-mounth="Outubro">Outubro</div>
                     <div data-mounth="Novembro">Novembro</div>
                     <div data-mounth="Dezembro">Dezembro</div>
+                    <input type="hidden" value="">
                   </div>
                 </div>
                 <div class="select year" id="dropdown">
@@ -121,7 +165,7 @@
                     <p>Ano</p>
                     <p>&#x23F7;</p>
                   </div>
-                  <div class="year-options">
+                  <div class="year-options" id="year">
                     <div data-year="2014">2014</div>
                     <div data-year="2015">2015</div>
                     <div data-year="2016">2016</div>
@@ -132,9 +176,16 @@
                     <div data-year="2021">2021</div>
                     <div data-year="2022">2022</div>
                     <div data-year="2023">2023</div>
+                    <input type="hidden" value="">
                   </div>
                 </div>
+
+                <button class="submit" id="submit">
+                  <p>BUSCAR</p>
+                </button class="submit">
+
               </div>
+
               <div class="export" id="dropdown">
                 <p>Exporta </p>
                 <img src="img/dashboard-icons/export.png" alt="Exportar">
@@ -148,17 +199,17 @@
           </form>
           <!------DAHSBOARD HEADER------>
           <div class="dashboard-info">
-            <div class="dashboard-enrollment">
-              <p>Matrícula</p>
+            <div class="dashboard-number">
+              <p>Número</p>
             </div>
-            <div class="dashboard-CPF">
-              <p>CPF</p>
+            <div class="dashboard-modality">
+              <p>Modalidade</p>
             </div>
-            <div class="dashboard-servant">
-              <p>Servidor</p>
+            <div class="dashboard-data">
+              <p>Data</p>
             </div>
-            <div class="dashboard-occupation">
-              <p>Cargo</p>
+            <div class="dashboard-situation">
+              <p>Situação</p>
             </div>
             <div class="dashboard-details last-column">
               <p>Detalhes</p>
@@ -166,129 +217,131 @@
           </div>
           <!------DAHSBOARD ROWS------>
           <div class="dashboard-row">
-            <div class="dashboard-enrollment-row">
-              <p>393-0</p>
+            <div class="dashboard-number-row">
+              <p>17/2023</p>
             </div>
-            <div class="dashboard-CPF-row">
-              <p>113.161.494-12</p>
+            <div class="dashboard-modality-row">
+              <p>Pregão Eletrônico</p>
             </div>
-            <div class="dashboard-servant-row">
-              <p>Pedro Henrique De Souza Oliveira</p>
+            <div class="dashboard-date-row">
+              <p>07/06/2023</p>
             </div>
-            <div class="dashboard-occupation-row">
-              <p>Coordenador de Tecnologia</p>
+            <div class="dashboard-situation-row">
+              <p>Em Andamento</p>
             </div>
             <div class="dashboard-details-row" id="dropdown">
               <div class="details-icon">
-                <img src="img/dashboard-icons/descrition-row.png" alt="descricao">
+                <img src="img/dashboard-icons/expanding-icon.png" alt="descricao">
               </div>
             </div>
             <!--ROW DETAILS-->
-            <div class="details-sub-row">
-              <div class="gross-salary-row">
-                <p>Sal. Bruto</p>
-                <p>R$ 3760</p>
-              </div>
-              <div class="net-salary-row">
-                <p>Sal. Líquido</p>
-                <p>R$ 3160</p>
-              </div>
-              <div class="deductions-row">
-                <p>Descontos</p>
-                <p>600 R$</p>
-              </div>
-              <div class="payroll-period-row">
-                <p>Competência</p>
-                <p>MENSAL</p>
-              </div>
+            <div>
+
             </div>
           </div>
           <div class="dashboard-row">
-            <div class="dashboard-enrollment-row">
-              <p>424-0</p>
+            <div class="dashboard-number-row">
+              <p>17/2014</p>
             </div>
-            <div class="dashboard-CPF-row">
-              <p>142.442.987-08</p>
+            <div class="dashboard-modality-row">
+              <p>Concurso</p>
             </div>
-            <div class="dashboard-servant-row">
-              <p>Jose Alvaro de Oliveira</p>
+            <div class="dashboard-date-row">
+              <p>12/03/2015</p>
             </div>
-            <div class="dashboard-occupation-row">
-              <p>Diretor de Tecnologia</p>
+            <div class="dashboard-situation-row">
+              <p>Homologada</p>
             </div>
             <div class="dashboard-details-row" id="dropdown">
               <div class="details-icon">
-                <img src="img/dashboard-icons/descrition-row.png" alt="descricao">
+                <img src="img/dashboard-icons/expanding-icon.png" alt="descricao">
               </div>
             </div>
             <!--ROW DETAILS-->
-            <div class="details-sub-row">
-              <div class="gross-salary-row">
-                <p>Sal. Bruto</p>
-                <p>R$ 9760</p>
-              </div>
-              <div class="net-salary-row">
-                <p>Sal. Líquido</p>
-                <p>R$ 8160</p>
-              </div>
-              <div class="deductions-row">
-                <p>Descontos</p>
-                <p>1600 R$</p>
-              </div>
-              <div class="payroll-period-row">
-                <p>Competência</p>
-                <p>MENSAL</p>
-              </div>
+            <div>
+
             </div>
           </div>
           <div class="dashboard-row">
-            <div class="dashboard-enrollment-row">
-              <p>423-0</p>
+            <div class="dashboard-number-row">
+              <p>16/2023</p>
             </div>
-            <div class="dashboard-CPF-row">
-              <p>889.975.454.11</p>
+            <div class="dashboard-modality-row">
+              <p>Pregão Presencial</p>
             </div>
-            <div class="dashboard-servant-row">
-              <p>Edriana Cirilo de Souza</p>
+            <div class="dashboard-date-row">
+              <p>09/26/2023</p>
             </div>
-            <div class="dashboard-occupation-row">
-              <p>Super Intendente</p>
+            <div class="dashboard-situation-row">
+              <p>Finalizado</p>
             </div>
             <div class="dashboard-details-row" id="dropdown">
               <div class="details-icon">
-                <img src="img/dashboard-icons/descrition-row.png" alt="descricao">
+                <img src="img/dashboard-icons/expanding-icon.png" alt="descricao">
               </div>
             </div>
             <!--ROW DETAILS-->
-            <div class="details-sub-row">
-              <div class="gross-salary-row">
-                <p>Sal. Bruto</p>
-                <p>R$ 11760</p>
+            <div>
+
+            </div>
+          </div>
+          <div class="dashboard-row">
+            <div class="dashboard-number-row">
+              <p>13/2023</p>
+            </div>
+            <div class="dashboard-modality-row">
+              <p>Pregão Eletrônico</p>
+            </div>
+            <div class="dashboard-date-row">
+              <p>12/12/2021</p>
+            </div>
+            <div class="dashboard-situation-row">
+              <p>Em Andamento</p>
+            </div>
+            <div class="dashboard-details-row" id="dropdown">
+              <div class="details-icon">
+                <img src="img/dashboard-icons/expanding-icon.png" alt="descricao">
               </div>
-              <div class="net-salary-row">
-                <p>Sal. Líquido</p>
-                <p>R$ 10160</p>
+            </div>
+            <!--ROW DETAILS-->
+            <div>
+
+            </div>
+          </div>
+          <div class="dashboard-row">
+            <div class="dashboard-number-row">
+              <p>20/2023</p>
+            </div>
+            <div class="dashboard-modality-row">
+              <p>Pregão Eletrônico</p>
+            </div>
+            <div class="dashboard-date-row">
+              <p>12/06/2023</p>
+            </div>
+            <div class="dashboard-situation-row">
+              <p>Finalizado</p>
+            </div>
+            <div class="dashboard-details-row" id="dropdown">
+              <div class="details-icon">
+                <img src="img/dashboard-icons/expanding-icon.png" alt="descricao">
               </div>
-              <div class="deductions-row">
-                <p>Descontos</p>
-                <p>1600 R$</p>
-              </div>
-              <div class="payroll-period-row">
-                <p>Competência</p>
-                <p>MENSAL</p>
-              </div>
+            </div>
+            <!--ROW DETAILS-->
+            <div>
+
             </div>
           </div>
         </div>
-      </section>
     </div>
-    <footer class="footer">
-      <div class="grid-container">
-        <p class="col-span-12">© 2001/2023 - Mega Assessoria, todos os direitos reservados.</p>
-      </div>
-    </footer>
+    </section>
   </div>
-  <script type="module" src="js/script.js"></script>
+  <footer class="footer">
+    <div class="grid-container">
+      <p class="col-span-12">© 2001/2023 - Mega Assessoria, todos os direitos reservados.</p>
+    </div>
+  </footer>
+  </div>
+  <script type="module" src="js/scriptDashboardBidding.js"></script>
 </body>
 
 </html>
